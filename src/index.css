@@ -1,8 +1,13 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500;600;700;800&family=Varela+Round&display=swap');
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  
+  /* font-family: 'Noto Sans', sans-serif; */
+  font-family: 'Varela Round', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,3 +16,153 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container{
+  margin: 0 20%;
+  text-align: center;
+}
+
+.card{
+  min-height: 20rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  scroll-behavior: smooth;
+}
+.veggie-card{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 2rem ;
+}
+.card img{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+h3{
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100px;
+  width: 100%;
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+.overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+}
+
+
+h2{
+  font-size: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+h1{
+  margin: 2rem auto;
+  text-align: center;
+  font-size: 3rem;
+}
+
+form{
+  max-width: 100%;
+  width: 600px;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+form input{
+  padding: 0.5rem;
+  width: 400px;
+  border: 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3),
+  0 -3px 6px rgba(0, 0, 0, 0.3) ;
+  border-radius: 3px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: rgba(54, 54, 54);
+}
+form input:focus{
+  /* outline-color: rgba(54, 54, 54); */
+  outline-color: #ff0000;
+  /* outline-color: rgb(118, 187, 244); */
+}
+
+.btn{
+  display: inline-block;
+  background-color: rgba(54, 54, 54);
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border-radius: 3px;
+  letter-spacing: 1.2px;
+  border: 0;
+  cursor: pointer;
+}
+
+.search-btn{
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3),
+  0 -3px 6px rgba(0, 0, 0, 0.3) ;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.btn:focus{
+  outline: none;
+}
+
+.btn:hover{
+  opacity: 0.95;
+}
+
+@media(max-width:801px){
+  .veggie-card{
+    grid-template-columns: repeat(2, 1fr);
+    height: 50px;
+  }
+    .container{
+      margin: 0 2%;
+      text-align: center;
+    }
+  }
+
+@media(max-width:668px){
+  .veggie-card{
+    grid-template-columns: 1fr;
+  }
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
